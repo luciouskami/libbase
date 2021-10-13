@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include "MINT/MINT.h"
+
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 #define HINST_THISCOMPONENT ((HINSTANCE)&__ImageBase)
 
@@ -19,7 +21,6 @@ EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 #include "memory/shared_memory.h"
 #include "process/info.h"
 #include "process/launch.h"
-#include "process/iter.h"
 #include "modules/library.h"
 #include "modules/resource.h"
 #include "modules/pe_parser.h"

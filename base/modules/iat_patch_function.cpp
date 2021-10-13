@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "../universal.inl"
+#include "base/universal.inl"
 
 
 namespace base::modules
@@ -171,7 +171,7 @@ namespace base::modules
         _In_ void* new_function
     ) {
 
-        auto name_wcs = mbstowcs(module);
+        auto name_wcs = mbstowcs(module, CP_UTF8);
 
         HMODULE module_handle = LoadLibraryW(name_wcs.c_str());
         if (module_handle == nullptr) {
